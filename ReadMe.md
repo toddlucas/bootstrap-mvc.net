@@ -25,14 +25,14 @@ Note the inclusion of the htmlAttributes parameter. This is required for Bootstr
 ```
 
 As with normal LabelFor helpers, if you provide a DisplayAttribute for your model property, the Name text will be emitted.
-Note, however, that it is emitted _after_ the nested helper is rendered, just prior to the closing </label> tag.
+Note, however, that it is emitted _after_ the nested helper is rendered, just prior to the closing label tag.
 
 ```C#
-    [Display(Name = "Hey, Check Me!")]
-    public bool CheckMe { get; set; }
+[Display(Name = "Hey, Check Me!")]
+public bool CheckMe { get; set; }
 ```
 
 The BeginLabel[For] helpers mirror those in ASP.NET MVC, as such, they fall under the same Apache 2.0 license.
-I have taken the liberty to include them in the System.Web.Mvc.Html in order to simplify their use.
-If you would like to put them into a different namespace, remember to reference the namespace with a @using directive to your view.
+I have taken the liberty to include them in the System.Web.Mvc.Html namespace in order to simplify their use.
+If you would like to put them into a different namespace, remember to reference that namespace with a @using directive to your view.
 As an alternative, you can add a new namespace reference to the Web.config file in your Views directory.
